@@ -1,0 +1,111 @@
+body{background: #d6eaf8;}
+tr,td{
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: 2px solid black;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(90deg, rgb(13, 18, 79), rgb(0, 10, 129));
+}
+table{background-color: rgb(0, 0, 0)}
+.empty{background:rgb(142, 218, 222)}
+.flag{
+  background: rgb(179, 226, 184);
+  background-image: url(./img/flag.png);
+  background-size: cover;}
+.bomb{
+  background: rgb(213, 69, 57);
+  background-image: url(./img/mine.png);
+  background-size: cover;}
+.counts{
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mines-count{text-align: left; position: relative;}
+.mines-count::before{
+  content: " ";
+  background-image: url(./img/mine.png);
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-size: cover;
+  left: -25px;
+  top: 5px;
+}
+.flag-count{text-align: right; position: relative;}
+.flag-count::before{
+  content: "";
+  background-image: url(./img/flag.png);
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-size: cover;
+  left: -25px;
+  top: 5px;
+}
+.input{
+  text-align: center;
+  margin: auto;
+}
+.container{display: flex;justify-content: center;}
+.btn{
+  width: 300px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+#cells{
+  width: 400px;
+  height: 40px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+button{
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 20px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+}
+button:hover {
+  background-position: right center;
+}
+.vOrL{
+  height: 50px;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: -2px -1px 2px black,  0px 0px 10px black,  5px 5px 50px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: anim .5s infinite alternate;
+}
+@keyframes anim {
+  from{
+    transform: scale(1);
+  }
+  to{
+      transform: scale(0.8);
+  }
+}
